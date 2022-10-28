@@ -1,67 +1,67 @@
-public class Aeropuerto {
-    private String nombre;
-    private String ciudad;
-    private String pais;
-    private Compañia listaCompañia[] = new Compañia[10];
-    private int numCompañia;
+public class Airport {
+    private String name;
+    private String city;
+    private String country;
+    private Company companylist[] = new Company[10];
+    private int numCompany;
 
     // constructor
-    public Aeropuerto(String nombre, String ciudad, String pais) {
-        this.nombre = nombre;
-        this.ciudad = ciudad;
-        this.pais = pais;
-        this.numCompañia = 0;
+    public Airport(String name, String city, String country) {
+        this.name = name;
+        this.city = city;
+        this.country = country;
+        this.numCompany = 0;
     }
 
-    public Aeropuerto(String nombre, String ciudad, String pais, Compañia c[]) {
-        this.nombre = nombre;
-        this.ciudad = ciudad;
-        this.pais = pais;
-        listaCompañia = c;
-        this.numCompañia = c.length;
+    public Airport(String name, String city, String country, Company c[]) {
+        this.name = name;
+        this.city = city;
+        this.country = country;
+        companylist = c;
+        this.numCompany = c.length;
     }
 
     // methods
 
-    public void insertarCompañia(Compañia compañia) {
-        listaCompañia[numCompañia] = compañia;
-        numCompañia++;
+    public void insertCompany(Company company) {
+        companylist[numCompany] = company;
+        numCompany++;
     }
 
     // getters
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public String getCiudad() {
-        return ciudad;
+    public String getCity() {
+        return city;
     }
 
-    public String getPais() {
-        return pais;
+    public String getCountry() {
+        return country;
     }
 
-    public Compañia[] getListaCompañia() {
-        return listaCompañia;
+    public Company[] getCompanylist() {
+        return companylist;
     }
 
-    public int getNumCompañia() {
-        return numCompañia;
+    public int getNumCompany() {
+        return numCompany;
     }
 
-    public Compañia getCompañia(int i) {
-        return listaCompañia[i];
+    public Company getCompany(int i) {
+        return companylist[i];
     }
 
-    public Compañia getCompañia(String nombre) {
-        boolean encontrado = false;
+    public Company getCompany(String name) {
+        boolean find = false;
         int i = 0;
-        Compañia c = null;
-        while ((!encontrado) && (i < listaCompañia.length)) {
-            if (nombre.equals(listaCompañia[i].getNombre())) {
-                encontrado = true;
-                c = listaCompañia[i];
+        Company c = null;
+        while ((!find) && (i < companylist.length)) {
+            if (name.equals(companylist[i].getName())) {
+                find = true;
+                c = companylist[i];
             }
             i++;
         }

@@ -1,26 +1,26 @@
-public class Pasajero {
-    private String nombre;
-    private String pasaporte;
-    private String nacionalidad;
+public class Passenger {
+    private String name;
+    private String passport;
+    private String nationality;
 
     // Constructor
-    public Pasajero(String nombre, String pasaporte, String nacionalidad) {
-        this.nombre = nombre;
-        this.pasaporte = pasaporte;
-        this.nacionalidad = nacionalidad;
+    public Passenger(String name, String passport, String nationality) {
+        this.name = name;
+        this.passport = passport;
+        this.nationality = nationality;
     }
 
     // Getters
-    public String getNombre() {
-        return this.nombre;
+    public String getName() {
+        return this.name;
     }
 
-    public String getPasaporte() {
-        return this.pasaporte;
+    public String getPassport() {
+        return this.passport;
     }
 
-    public String getNacionalidad() {
-        return this.nacionalidad;
+    public String getNationality() {
+        return this.nationality;
     }
 
 }

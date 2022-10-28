@@ -1,35 +1,35 @@
-public class AeropuertoPrivado extends Aeropuerto {
-    private String listaEmpresas[] = new String[10];
-    private int numEmpresas;
+public class PrivateAirport extends Airport {
+    private String listCompanies[] = new String[10];
+    private int numCompanies;
 
     // constructor
-    public AeropuertoPrivado(String nombre, String ciudad, String pais) {
-        super(nombre, ciudad, pais);
+    public PrivateAirport(String name, String city, String country) {
+        super(name, city, country);
     }
 
-    public AeropuertoPrivado(String nombre, String ciudad, String pais, Compañia c[], String e[]) {
-        super(nombre, ciudad, pais, c);
-        this.listaEmpresas = e;
-        numEmpresas = e.length;
+    public PrivateAirport(String name, String city, String country, Company c[], String e[]) {
+        super(name, city, country, c);
+        this.listCompanies = e;
+        numCompanies = e.length;
     }
 
-    public void insertarEmpresas(String e[]) {
-        this.listaEmpresas = e;
-        this.numEmpresas = e.length;
+    public void insertCompany(String e[]) {
+        this.listCompanies = e;
+        this.numCompanies = e.length;
     }
 
-    public void insertarEmpresas(String e) {
-        listaEmpresas[numEmpresas] = e;
-        numEmpresas++;
+    public void insertCompany(String e) {
+        listCompanies[numCompanies] = e;
+        numCompanies++;
     }
 
-    // get
-    public String[] getListaEmpresas() {
-        return listaEmpresas;
+    // Getters
+    public String[] getListCompanies() {
+        return listCompanies;
     }
 
-    public int getNumEmpresas() {
-        return numEmpresas;
+    public int getNumCompanies() {
+        return numCompanies;
     }
 
 }

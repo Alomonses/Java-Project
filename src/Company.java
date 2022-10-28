@@ -1,47 +1,47 @@
 
-public class Compañia {
-    private String nombre;
-    private Vuelo listaVuelos[] = new Vuelo[10];
-    private int numVuelo = 0;
+public class Company {
+    private String name;
+    private Flight listFlights[] = new Flight[10];
+    private int numFlight = 0;
 
     // Constructor
-    public Compañia(String nombre) {
-        this.nombre = nombre;
+    public Company(String name) {
+        this.name = name;
     }
 
-    public Compañia(String nombre, Vuelo v[]) {
-        this.nombre = nombre;
-        listaVuelos = v;
-        numVuelo = v.length;
+    public Company(String name, Flight v[]) {
+        this.name = name;
+        listFlights = v;
+        numFlight = v.length;
     }
 
-    public void insertarVuelo(Vuelo vuelo) {
-        listaVuelos[numVuelo] = vuelo;
-        numVuelo++;
+    public void insertFlight(Flight flight) {
+        listFlights[numFlight] = flight;
+        numFlight++;
     }
 
     // Getters
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public int getNumVuelo() {
-        return numVuelo;
+    public int getNumFlight() {
+        return numFlight;
     }
 
-    public Vuelo getVuelo(int i) {
-        return listaVuelos[i];
+    public Flight getFlight(int i) {
+        return listFlights[i];
     }
 
-    public Vuelo getVuelo(String id) {
+    public Flight getFlight(String id) {
         boolean encontrado = false;
         int i = 0;
-        Vuelo v = null;
-        while ((!encontrado) && (i < listaVuelos.length)) {
-            if (id.equals(listaVuelos[i].getIdentificador())) {
+        Flight v = null;
+        while ((!encontrado) && (i < listFlights.length)) {
+            if (id.equals(listFlights[i].getidFlight())) {
                 encontrado = true;
-                v = listaVuelos[i];
+                v = listFlights[i];
             }
             i++;
         }

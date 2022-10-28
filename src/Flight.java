@@ -1,65 +1,65 @@
-public class Vuelo {
-    private String identificador;
-    private String ciudadOrigen;
-    private String ciudadDestino;
-    private double precio;
-    private int numMaxPasajeros;
-    private int numActualPasajeros;
+public class Flight {
+    private String idFlight;
+    private String origen;
+    private String destiny;
+    private double price;
+    private int numMaxPassengers;
+    private int numActualPassengers;
 
-    private Pasajero listaPasajero[];
+    private Passenger listPassengers[];
 
     // Constructor
-    public Vuelo(String identificador, String ciudadOrigen, String ciudadDestino, double precio, int numMaxPasajeros) {
-        this.identificador = identificador;
-        this.ciudadOrigen = ciudadOrigen;
-        this.ciudadDestino = ciudadDestino;
-        this.precio = precio;
-        this.numMaxPasajeros = numMaxPasajeros;
-        this.numActualPasajeros = 0;
-        this.listaPasajero = new Pasajero[numMaxPasajeros];
+    public Flight(String idFlight, String origen, String destiny, double price, int numMaxPassengers) {
+        this.idFlight = idFlight;
+        this.origen = origen;
+        this.destiny = destiny;
+        this.price = price;
+        this.numMaxPassengers = numMaxPassengers;
+        this.numActualPassengers = 0;
+        this.listPassengers = new Passenger[numMaxPassengers];
     }
 
-    public void insertarPasajero(Pasajero pasajero) {
-        listaPasajero[numActualPasajeros] = pasajero;
-        numActualPasajeros++;
+    public void insertPassenger(Passenger pasajero) {
+        listPassengers[numActualPassengers] = pasajero;
+        numActualPassengers++;
     }
 
-    public String getIdentificador() {
-        return this.identificador;
+    public String getidFlight() {
+        return this.idFlight;
     }
 
-    public String getCiudadOrigen() {
-        return this.ciudadOrigen;
+    public String getOrigen() {
+        return this.origen;
     }
 
-    public String getCiudadDestino() {
-        return this.ciudadDestino;
+    public String getDestiny() {
+        return this.destiny;
     }
 
-    public double getPrecio() {
-        return this.precio;
+    public double getPrice() {
+        return this.price;
     }
 
-    public int getNumMaxPasajeros() {
-        return this.numMaxPasajeros;
+    public int getnumMaxPassengers() {
+        return this.numMaxPassengers;
     }
 
-    public int getNumActualPasajeros() {
-        return this.numActualPasajeros;
+    public int getnumActualPassengers() {
+        return this.numActualPassengers;
     }
 
-    public Pasajero getPasajero(int i) {
-        return listaPasajero[i];
+    public Passenger getPassenger(int i) {
+        return listPassengers[i];
     }
 
-    public Pasajero getPasajero(String pasaporte) {
-        boolean encontrado = false;
+    public Passenger getPassenger(String passport) {
+        boolean find = false;
         int i = 0;
-        Pasajero pas = null;
-        while ((!encontrado) && (i < listaPasajero.length)) {
-            if (pasaporte.equals(listaPasajero[i].getPasaporte())) {
-                encontrado = true;
-                pas = listaPasajero[i];
+        Passenger pas = null;
+        while ((!find) && (i < listPassengers.length)) {
+            if (passport.equals(listPassengers[i].getPassport())) {
+                find = true;
+                pas = listPassengers[i];
             }
             i++;
         }

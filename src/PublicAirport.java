@@ -1,17 +1,17 @@
-public class AeropuetoPublico extends Aeropuerto {
+public class PublicAirport extends Airport {
     private double subvencion;
 
-    public AeropuetoPublico(String nombre, String ciudad, String pais) {
-        super(nombre, ciudad, pais);
+    public PublicAirport(String name, String city, String country) {
+        super(name, city, country);
     }
 
-    public AeropuetoPublico(double subvencion, String nombre, String ciudad, String pais, Compañia c[], String e[]) {
-        super(nombre, ciudad, pais, c);
+    public PublicAirport(double subvencion, String nombre, String city, String country, Company c[], String e[]) {
+        super(nombre, city, country, c);
         this.subvencion = subvencion;
     }
 
-    public AeropuetoPublico(double subvencion, String nombre, String ciudad, String pais) {
-        super(nombre, ciudad, pais);
+    public PublicAirport(double subvencion, String name, String city, String country) {
+        super(name, city, country);
         this.subvencion = subvencion;
     }
 
